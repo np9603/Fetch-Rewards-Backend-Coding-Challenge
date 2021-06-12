@@ -188,3 +188,6 @@ Response
 
 - https://docs.pytest.org/en/6.2.x/index.html
 - https://medium.com/analytics-vidhya/how-to-test-flask-applications-aef12ae5181c
+- https://guides.github.com/features/mastering-markdown/
+- https://devhints.io/curl
+- https://flask.palletsprojects.com/en/1.1.x/testing/
