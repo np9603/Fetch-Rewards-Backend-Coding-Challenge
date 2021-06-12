@@ -102,6 +102,19 @@ Response
 ```
 Successfully added transaction record to the main database
 ```
+```
+Successfully added transaction record to the main database
+```
+```
+Successfully added transaction record to the main database
+```
+```
+Successfully added transaction record to the main database
+```
+```
+Successfully added transaction record to the main database
+```
+
 
 2. Show initial balance
 
