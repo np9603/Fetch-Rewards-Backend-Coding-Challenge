@@ -1,0 +1,30 @@
+Original
+
+{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }
+{ "payer": "UNILEVER", "points": 200, "timestamp": "2020-10-31T11:00:00Z"}
+{ "payer": "DANNON", "points": -200, "timestamp": "2020-10-31T15:00:00Z" }
+{ "payer": "MILLER COORS", "points": 10000, "timestamp": "2020-11-01T14:00:00Z" }
+{ "payer": "DANNON", "points": 300, "timestamp": "2020-10-31T10:00:00Z" }
+
+
+Sorted based on timestamp
+{ "payer": "DANNON", "points": 300, "timestamp": "2020-10-31T10:00:00Z" }
+{ "payer": "UNILEVER", "points": 200, "timestamp": "2020-10-31T11:00:00Z"}
+{ "payer": "DANNON", "points": -200, "timestamp": "2020-10-31T15:00:00Z" }
+{ "payer": "MILLER COORS", "points": 10000, "timestamp": "2020-11-01T14:00:00Z" }
+{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }
+
+
+
+FINAL CURL COMMANDS
+curl -i -H "Content-Type: application/json" --data "{\"payer\": \"DANNON\", \"points\":1000, \"timestamp\": \"2020-11-02T14:00:00Z\"}" -X POST http://127.0.0.1:5000/add_transaction
+curl -i -H "Content-Type: application/json" --data "{\"payer\": \"UNILEVER\", \"points\":200, \"timestamp\": \"2020-10-31T11:00:00Z\"}"  -X POST http://127.0.0.1:5000/add_transaction
+curl -i -H "Content-Type: application/json" --data "{\"payer\": \"DANNON\", \"points\":-200, \"timestamp\": \"2020-10-31T15:00:00Z\"}" -X POST http://127.0.0.1:5000/add_transaction
+curl -i -H "Content-Type: application/json" --data "{\"payer\": \"MILLER COORS\", \"points\":10000, \"timestamp\": \"2020-11-01T14:00:00Z\"}" -X POST http://127.0.0.1:5000/add_transaction
+curl -i -H "Content-Type: application/json" --data "{\"payer\": \"DANNON\", \"points\":300, \"timestamp\": \"2020-10-31T10:00:00Z\"}" -X POST http://127.0.0.1:5000/add_transaction
+
+curl -i -H "Content-Type: application/json" http://127.0.0.1:5000/show_initial_balance
+
+curl -i -H "Content-Type: application/json" --data "{\"points\": 5000}" -X DELETE http://127.0.0.1:5000/spend_points
+
+curl -i -H "Content-Type: application/json" http://127.0.0.1:5000/show_balance
